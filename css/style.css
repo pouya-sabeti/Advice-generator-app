@@ -3,12 +3,17 @@
   src: url(../font/IRANSansWeb.ttf);
 } */
 @font-face {
-  font-family: "LeagueSpartan";
-  src: url(../font/LeagueSpartan-VariableFont_wght.ttf);
-  font-weight: 700;
+  font-family: "Manrope";
+  src: url(../font/Manrope-VariableFont_wght.ttf);
+
 }
 
-:root {}
+:root {
+  --background-color: hsl(218, 23%, 16%);
+  --background-box: hsl(217, 19%, 24%);
+  --p-color: hsl(150, 100%, 66%);
+  --h3-color: hsl(193, 38%, 86%);
+}
 
 * {
   padding: 0;
@@ -18,11 +23,61 @@
 }
 
 body {
-  font-family: "LeagueSpartan";
-  background: var(--background-theme-1);
+  font-family: "Manrope";
+  background: var(--background-color);
+  font-weight: 800 !important;
 }
 
 .attribution {
   width: 100%;
   text-align: center;
+}
+
+.box {
+  width: 520px;
+  height: max-content;
+  background: var(--background-box);
+  border-radius: 20px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 30px;
+}
+
+.box p {
+  margin: 35px;
+  font-size: 12px;
+  color: var(--p-color);
+  font-weight: 400 !important;
+  letter-spacing: 4px;
+}
+
+.box h3 {
+  color: var(--h3-color);
+  font-size: 24px;
+  margin: 0 20px 35px 20px;
+}
+
+.dice {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  background: var(--p-color);
+  border-radius: 100%;
+  transition: all .3s ease;
+  padding: 18px 0;
+  transform: translateY(30px);
+}
+
+.dice:hover {
+  box-shadow: 0 0 25px 3px var(--p-color);
+}
+.display_block{
+  display: block;
+}
+.display_none{
+  display: none;
 }
